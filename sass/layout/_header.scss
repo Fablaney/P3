@@ -1,0 +1,15 @@
+header
+{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    box-shadow: black 0px 0px 10px;
+    z-index: 50 !important;
+    position: sticky;
+    top: 0;
+}
+.logo
+{
+    font-size: 40px;
+    padding: 8px;
+}

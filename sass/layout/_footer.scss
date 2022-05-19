@@ -1,0 +1,15 @@
+footer
+{
+    background-color: $colour-grey;
+    display: flex;
+    flex-direction: column;
+    
+    >a
+    {
+        color: white;
+    }
+        >i
+        {
+            color: white;
+        }
+}

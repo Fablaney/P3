@@ -1,0 +1,22 @@
+// design du formulaire de recherche
+.recherche
+{
+    background-color: rgb(234, 234, 234);
+}
+.search
+{
+    outline: none;
+    border: 0px;
+    background-color: rgb(234, 234, 234);
+    padding: 1em;
+    
+    &:focus
+    {
+        outline: none;
+    }
+}
+.search::placeholder
+{
+    color: black;
+    font-size: 20px;
+}

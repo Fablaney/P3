@@ -1,0 +1,57 @@
+
+
+// Couleur des sections
+.section-1
+{
+    background-color: #f6f6f6;
+
+    @media(min-width: 1313px)
+    {
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.section-3
+{
+    background-color: rgb(246, 246, 246);
+}
+
+
+// Mise en forme des cards
+.card
+{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.4s;
+    border-radius: 20px;
+
+    position: relative;
+
+    >img
+    {
+        border-radius: 20px 20px 0 0;
+    }
+}
+.card:hover
+{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+img
+{
+    border-radius: 5px 5px 0 0;
+}
+.new
+{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: $colour-tertiary;
+    color: darken($colour-tertiary, 40);
+    padding: 0.5em;
+    border-radius: 6px;
+
+    &:hover
+    {
+        background-color:darken($colour-tertiary, 10);
+        color: darken($colour-tertiary, 50);
+    }
+}

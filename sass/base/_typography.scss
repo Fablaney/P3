@@ -1,0 +1,67 @@
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Shrikhand', cursive;
+body
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, .logo
+{
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 26;
+}
+.shrikhand
+{
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 22px;
+}
+.rob-weight-300 
+{
+    font-weight: 300;
+}
+.rob-weight-400 
+{
+    font-weight: 400;
+}
+.rob-weight-500 
+{
+    font-weight: 500;
+}
+.rob-weight-700 
+{
+    font-weight: 700;
+}
+.rob-weight-900 
+{
+    font-weight: 900;
+}
+.bold
+{
+    font-style: bold;
+}
+
+// Textes
+.text-center
+{
+    text-align: center;
+}
+.text-center-lg
+{
+    text-align: center;
+}
+@media(min-width: 992px)
+{
+
+    .text-center-md
+    {
+        text-align: left;
+    }
+}
+@media(min-width: 992px)
+{
+
+    .text-center-lg
+    {
+        text-align: left;
+    }
+}

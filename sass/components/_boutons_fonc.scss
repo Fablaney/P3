@@ -1,0 +1,45 @@
+.fonc
+{
+    background-color: rgb(246, 246, 246);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: 768px)
+    {
+        width: fit-content;
+    }
+    
+    position: relative;
+    margin-left: 16px;
+ 
+    i
+    {
+        color: $colour-grey-light;
+    }
+
+    &:hover
+    {
+        background-color: lighten($colour-primary, 35%); 
+    }
+
+    &:hover i
+    {
+        color: $colour-primary;
+    }
+    >span
+    {
+        position: absolute;
+        left: -16px;
+        background-color: $colour-primary;
+        color: white;
+        border-radius: 1000px;
+        height: 2em;
+        width: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

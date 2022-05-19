@@ -1,0 +1,42 @@
+body
+{
+    margin: 0;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+}
+img
+{
+    width: 100%;
+}
+.container
+{
+    width: 90%;
+    margin: auto;
+}
+.z-10
+{
+    z-index: 10;
+}
+.z-20
+{
+    z-index: 20;
+}
+.z-30
+{
+    z-index: 30;
+}
+.z-n-10
+{
+    z-index: -10;
+}
+.z-n-20
+{
+    z-index: -20;
+}
+.z-n-30
+{
+    z-index: -30;
+}
