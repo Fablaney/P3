@@ -40,7 +40,18 @@
     border-radius: 40px 40px 0 0;
     background-color: $colour-246;
     z-index: 10;
+
+    >div>h1
+    {
+        font-size: 28px;
+
+        @media(min-width: 768px)
+        {
+            font-size: 32px;
+        }
+    }
 }
+
 
 // textes entrées plats desserts
 .upper
@@ -114,29 +125,29 @@
     display: flex;
     width: 0;
     background-color: $colour-tertiary;
-    transition: all 1s;
+    transition: all 400ms;
  
     .check
     {
         margin: auto;
         color: $colour-white;
-        transition: transform 1s;
+        transition: transform 400ms;
         transform: rotate(-180deg);
     }
 }
 
 // annimation des card, appear
-$prog-bar-dur: 1000ms;
-$annimation-dur: 1500ms;
+$duration: 300ms;
+$annimation-dur: 300ms;
 
-$prog-bar-delay: 300ms;
-$card-delay: $prog-bar-dur + $prog-bar-delay;
-// boucle d'appear
+$delay: 300ms;
+$card-delay: $duration + $delay;
+// boucle d'appear pour eviter te taper 20 fois la meme ligne
 @for $i from 1 through 20
 {
     .appear-#{$i}
     {
-        $card-delay: 500ms*$i;
+        $card-delay: 300ms*$i;
         animation: card $annimation-dur $card-delay cubic-bezier(.27, .7, .14, 1.01) both;
     }
 }

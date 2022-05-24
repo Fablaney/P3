@@ -50,7 +50,7 @@ body {
 
 h1, h2, h3, h4, h5, .logo {
   font-family: "Shrikhand", sans-serif;
-  font-size: 26;
+  font-size: 26px;
 }
 
 .shrikhand {
@@ -78,8 +78,12 @@ h1, h2, h3, h4, h5, .logo {
   font-weight: 900;
 }
 
+.light {
+  font-weight: 300;
+}
+
 .bold {
-  font-style: bold;
+  font-weight: 900;
 }
 
 .text-center {
@@ -90,7 +94,7 @@ h1, h2, h3, h4, h5, .logo {
   text-align: center;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .text-center-md {
     text-align: left;
   }
@@ -213,7 +217,7 @@ h1, h2, h3, h4, h5, .logo {
   color: #9356DC;
   font-size: 28px;
   opacity: 1;
-  transition: all 500ms;
+  transition: all 400ms;
 }
 .div-heart > .heart-solid {
   position: absolute;
@@ -222,16 +226,16 @@ h1, h2, h3, h4, h5, .logo {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  transition: all 500ms;
+  transition: all 400ms;
 }
 .div-heart:focus > .heart-empty {
   opacity: 0;
-  transition: all 500ms;
+  transition: all 400ms;
 }
 .div-heart:focus > .heart-solid {
   opacity: 1;
-  transition: all 500ms;
-  animation: heart 1.5s ease-in forwards;
+  transition: all 400ms;
+  animation: heart 500ms ease-in forwards;
 }
 
 @keyframes heart {
@@ -248,6 +252,7 @@ h1, h2, h3, h4, h5, .logo {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
+  transition: all 300ms;
   position: relative;
   margin-left: 16px;
 }
@@ -261,6 +266,7 @@ h1, h2, h3, h4, h5, .logo {
 }
 .fonc:hover {
   background-color: #f2eafb;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 .fonc:hover i {
   color: #9356DC;
@@ -276,6 +282,14 @@ h1, h2, h3, h4, h5, .logo {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.fonc > div {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .fonc > div {
+    font-size: 18px;
+  }
 }
 
 header {
@@ -788,11 +802,6 @@ footer > i {
 .section-1 {
   background-color: #f6f6f6;
 }
-@media (min-width: 1313px) {
-  .section-1 {
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
-  }
-}
 
 .section-3 {
   background-color: rgb(246, 246, 246);
@@ -804,16 +813,20 @@ footer > i {
   border-radius: 20px;
   position: relative;
 }
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 .card > img {
   border-radius: 20px 20px 0 0;
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
 img {
   border-radius: 5px 5px 0 0;
+}
+
+.card-titre {
+  font-size: 18px;
+  font-weight: 900;
 }
 
 .new {
@@ -861,6 +874,14 @@ img {
   border-radius: 40px 40px 0 0;
   background-color: rgb(246, 246, 246);
   z-index: 10;
+}
+.page-restau > div > h1 {
+  font-size: 28px;
+}
+@media (min-width: 768px) {
+  .page-restau > div > h1 {
+    font-size: 32px;
+  }
 }
 
 .upper {
@@ -921,93 +942,93 @@ img {
   display: flex;
   width: 0;
   background-color: #99E2D0;
-  transition: all 1s;
+  transition: all 400ms;
 }
 .checkbox .check {
   margin: auto;
   color: #fff;
-  transition: transform 1s;
+  transition: transform 400ms;
   transform: rotate(-180deg);
 }
 
 .appear-1 {
-  animation: card 1500ms 500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 300ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-2 {
-  animation: card 1500ms 1000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 600ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-3 {
-  animation: card 1500ms 1500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 900ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-4 {
-  animation: card 1500ms 2000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 1200ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-5 {
-  animation: card 1500ms 2500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 1500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-6 {
-  animation: card 1500ms 3000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 1800ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-7 {
-  animation: card 1500ms 3500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 2100ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-8 {
-  animation: card 1500ms 4000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 2400ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-9 {
-  animation: card 1500ms 4500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 2700ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-10 {
-  animation: card 1500ms 5000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 3000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-11 {
-  animation: card 1500ms 5500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 3300ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-12 {
-  animation: card 1500ms 6000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 3600ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-13 {
-  animation: card 1500ms 6500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 3900ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-14 {
-  animation: card 1500ms 7000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 4200ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-15 {
-  animation: card 1500ms 7500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 4500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-16 {
-  animation: card 1500ms 8000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 4800ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-17 {
-  animation: card 1500ms 8500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 5100ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-18 {
-  animation: card 1500ms 9000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 5400ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-19 {
-  animation: card 1500ms 9500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 5700ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-20 {
-  animation: card 1500ms 10000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 6000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 @keyframes card {

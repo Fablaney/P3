@@ -35,8 +35,13 @@ h1, h2, h3, h4, h5, .logo
 {
     font-weight: 900;
 }
+.light
+{
+    font-weight: 300;
+}
 .bold
 {
+    font-weight: 900;
     font-style: bold;
 }
 
@@ -49,7 +54,7 @@ h1, h2, h3, h4, h5, .logo
 {
     text-align: center;
 }
-@media(min-width: 992px)
+@media(min-width: 768px)
 {
 
     .text-center-md
