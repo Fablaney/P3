@@ -233,6 +233,17 @@ h1, h2, h3, h4, h5, .logo {
   transition: all 400ms;
   animation: heart 500ms ease-in forwards;
 }
+@media (min-width: 992px) {
+  .div-heart:hover > .heart-empty {
+    opacity: 0;
+    transition: all 400ms;
+  }
+  .div-heart:hover > .heart-solid {
+    opacity: 1;
+    transition: all 400ms;
+    animation: heart 500ms ease-in forwards;
+  }
+}
 
 @keyframes heart {
   0% {
