@@ -923,7 +923,7 @@ img {
   left: 5%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .fa-arrow-left {
     display: none;
   }
