@@ -36,13 +36,14 @@
 
     </header>
 
-    <div class="d-flex justify-center recherche">
-        <form class="d-flex item-center py-2" action="">
+    <div class="d-flex recherche">
+        <form class="" action="index.html">
 
-            <div>
-                <label for="search"><i class="fas fa-map-marker-alt"></i></label>
-                <input type="search" id="search" class="search" placeholder="Paris, Belleville...">
-            </div>
+            <i class="fas fa-map-marker-alt"></i>
+
+            <label class="search" for="search">
+                <input type="search" id="search" placeholder="Paris, Belleville...">
+            </label>
 
         </form>
     </div>
@@ -53,47 +54,47 @@
         <div class="row">
 
             <!-- Reservation -->
-            <section class="flex-md-1 py-5 section-1">
+            <div class="flex-md-1 py-5 section-1">
                 <div class="column justify-center px-4">
 
-                    <p class="text-center rob-weight-900">Réservez le menu qui vous convient</p>
-                    <p class="text-center mb-3">Découvrez des restaurants d'exeption, séléctionnés par nos soins</p>
+                    <h1 class="text-center bold">Réservez le menu qui vous convient</h1>
+                    <h2 class="text-center mb-3 light">Découvrez des restaurants d'exeption, séléctionnés par nos soins</h2>
 
                     <button class="btn-rose rob-weight-500 m-auto">Explorer nos restaurants</button>
 
                 </div>
-            </section>
+            </div>
 
             <!-- Fonctionnement -->
-            <section class="flex-md-2 py-5 px-4">
+            <div class="flex-md-2 py-5 px-3 fonctionnement">
 
-                <p class="rob-weight-900">Fonctionnement</p>
+                <p class="bold">Fonctionnement</p>
 
                 <div class="column-sm space-between pr-1 gap">
-                    <a href="#" class="fonc p-3 my-1 rob-weight-700">
+                    <a href="#" class="fonc px-1 py-2 my-1 rob-weight-700">
                         <span>1</span> 
                         <i class="fas fa-mobile-alt mx-1"></i> <div>Choisissez un restaurant</div>
-                    </a href="#">
+                    </a>
 
-                    <a href="#" class="fonc p-3 my-1 rob-weight-700">
+                    <a href="#" class="fonc px-1 py-2 my-1 rob-weight-700">
                         <span>2</span> 
                         <i class="fas fa-list-ul mx-1"></i> <div>Composez votre menu</div>
-                    </a href="#">
+                    </a>
 
-                    <a href="#" class="fonc p-3 my-1 rob-weight-700">
+                    <a href="#" class="fonc px-1 py-2 my-1 rob-weight-700">
                         <span>3</span> 
                         <i class="fas fa-store mx-1"></i> <div>Dégustez au restaurant</div>
-                    </a href="#">
+                    </a>
                 </div>
 
-            </section>
+            </div>
         </div>
 
         <!-- Restaurants -->
-        <section class="section-3 py-5">
+        <div class="section-3 py-5">
             <div class="container">
 
-                <p class="rob-weight-900">Restaurants</p >
+                <h3 class="rob-weight-900 ">Restaurants</h3>
 
                 <div class="row">
 
@@ -103,7 +104,7 @@
 
                         <div class="row px-2">
                             <div class="flex-6">
-                                <a href="la_palette_du_gout.html"><p class="rob-weight-700">La palette du goût</p></a>
+                                <a href="la_palette_du_gout.html"><p class="card-titre">La palette du goût</p></a>
                                 <p>Ménilmontant</p>
                             </div>
 
@@ -113,17 +114,17 @@
                             </button>
                         </div>
                         
-                        <div class="new">Nouveau</div>
+                        <div class="new bold">Nouveau</div>
 
                     </div>
 
-                    <div href="la_note_enchantee.html" class="card col">
+                    <div class="card col">
 
                         <img src="public/images/restaurants/image-2.jpg" alt="">
 
                         <div class="row px-2">
                             <div class="flex-6">
-                                <a href="la_note_enchantee.html"><p class="rob-weight-700">La note enchantée</p></a>
+                                <a href="la_note_enchantee.html"><p class="card-titre">La note enchantée</p></a>
                                 <p>Charonne</p>
                             </div>
 
@@ -133,7 +134,7 @@
                             </button>
                         </div>
                         
-                        <div class="new">Nouveau</div>
+                        <div class="new bold">Nouveau</div>
 
                     </div>
 
@@ -143,7 +144,7 @@
 
                         <div class="row px-2">
                             <div class="flex-6">
-                                <a href="a_la_française.html"><p class="rob-weight-700">À la française</p></a>
+                                <a href="a_la_française.html"><p class="card-titre">À la française</p></a>
                                 <p>Cité Rouge</p>
                             </div>
 
@@ -161,7 +162,7 @@
 
                         <div class="row px-2">
                             <div class="flex-6">
-                                <a href="le_delice_des_sens.html"><p class="rob-weight-700">Le délice des sens</p></a>
+                                <a href="le_delice_des_sens.html"><p class="card-titre">Le délice des sens</p></a>
                                 <p>Folie-Méricourt</p>
                             </div>
 
@@ -176,17 +177,17 @@
                 </div>
 
             </div>
-        </section>
+        </div>
 
     </main>
 
     <!-- Footer -->
-    <footer class="column p-4">
+    <footer class="column-sm space-around pt-3 px-2">
         <a class="mb-2 shrikhand" href="">ohmyfood</a>
         <a class="mb-1" href=""><i class="fas fa-utensils"></i> &nbsp; Proposer un restaurant</a>
         <a class="mb-1" href=""><i class="fas fa-hands-helping"></i> &nbsp; Devenir partenaire</a>
         <a class="mb-1" href="">Menitons légales</a>
-        <a class="mb-1" href="">Contact</a>
+        <a class="mb-1" href="mailto:contact@ohmyfood.com">Contact</a>
     </footer>
 
 </body>

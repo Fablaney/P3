@@ -5,11 +5,33 @@ body
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4, h5, .logo
+.logo
 {
     font-family: 'Shrikhand', sans-serif;
-    font-size: 26;
 }
+h1
+{
+    font-size: 24px;
+
+    @media(min-width: 768px)
+    {
+        font-size: 30px;
+    }
+}
+h2
+{
+    font-size: 16px;
+
+    @media(min-width: 768px)
+    {
+        font-size: 20px;
+    }
+}
+h3
+{
+    font-size: 24px;
+}
+
 .shrikhand
 {
     font-family: 'Shrikhand', sans-serif;
@@ -35,9 +57,13 @@ h1, h2, h3, h4, h5, .logo
 {
     font-weight: 900;
 }
+.light
+{
+    font-weight: 300;
+}
 .bold
 {
-    font-style: bold;
+    font-weight: 900;
 }
 
 // Textes
@@ -49,7 +75,7 @@ h1, h2, h3, h4, h5, .logo
 {
     text-align: center;
 }
-@media(min-width: 992px)
+@media(min-width: 768px)
 {
 
     .text-center-md

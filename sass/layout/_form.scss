@@ -2,21 +2,62 @@
 .recherche
 {
     background-color: rgb(234, 234, 234);
-}
-.search
-{
-    outline: none;
-    border: 0px;
-    background-color: rgb(234, 234, 234);
-    padding: 1em;
-    
-    &:focus
+
+    >form
     {
-        outline: none;
+        position: relative;
+
+        margin: auto;
+        width: 100%;
+        max-width: 800px;
+        >i
+        {
+            position: absolute;
+            top: 26px;
+            left: 0;
+            z-index: 10;
+
+            padding-left: 28%;
+
+            @media(min-width: 768px)
+            {
+                padding-left: 35%;
+            }
+        }
     }
 }
-.search::placeholder
+
+.search
 {
-    color: black;
-    font-size: 20px;
+    height: 73px;
+
+    >input
+    {
+        outline: none;
+        border: 0px;
+        background-color: rgb(234, 234, 234);
+
+        height: 73px;
+
+        width: 100%;
+        font-size: 20px;
+
+        padding-left: 35%;
+
+        @media(min-width: 768px)
+        {
+            padding-left: 40%;
+        }
+
+        &:focus
+        {
+            outline: none;
+        }
+
+        ::placeholder
+        {
+                color: black;
+                font-size: 20px;
+        }
+    }
 }
