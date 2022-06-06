@@ -48,9 +48,30 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3, h4, h5, .logo {
+.logo {
   font-family: "Shrikhand", sans-serif;
-  font-size: 26;
+}
+
+h1 {
+  font-size: 24px;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+h2 {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+
+h3 {
+  font-size: 24px;
 }
 
 .shrikhand {
@@ -78,8 +99,12 @@ h1, h2, h3, h4, h5, .logo {
   font-weight: 900;
 }
 
+.light {
+  font-weight: 300;
+}
+
 .bold {
-  font-style: bold;
+  font-weight: 900;
 }
 
 .text-center {
@@ -90,7 +115,7 @@ h1, h2, h3, h4, h5, .logo {
   text-align: center;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .text-center-md {
     text-align: left;
   }
@@ -108,7 +133,7 @@ h1, h2, h3, h4, h5, .logo {
   align-items: center;
   position: fixed;
   z-index: 1000;
-  animation: disapear 3s linear forwards;
+  animation: disapear 2s linear forwards;
 }
 
 @keyframes disapear {
@@ -138,13 +163,10 @@ h1, h2, h3, h4, h5, .logo {
 
 .pink-loader {
   background-color: #FF79DA;
-  background-image: radial-gradient(to right, rgb(250, 250, 250) 25%, rgba(0, 0, 0, 0.1) 50%, rgb(250, 250, 250) 75%);
   box-shadow: rgba(234, 0, 255, 0.425) 0px 0px 20px;
   height: 25px;
   width: 20%;
-  border-radius: 100%;
-  -webkit-animation: 2s linear 0s infinite alternate laser;
-  animation: laser 1s linear 0s infinite alternate;
+  animation: laser 2s linear 0s 1 forwards;
 }
 
 @keyframes laser {
@@ -197,6 +219,7 @@ h1, h2, h3, h4, h5, .logo {
 .btn-rose:hover {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 10px;
   transform: scale(1.2);
+  cursor: pointer;
 }
 .btn-rose:hover:before {
   width: 100%;
@@ -213,7 +236,7 @@ h1, h2, h3, h4, h5, .logo {
   color: #9356DC;
   font-size: 28px;
   opacity: 1;
-  transition: all 500ms;
+  transition: all 400ms;
 }
 .div-heart > .heart-solid {
   position: absolute;
@@ -222,16 +245,30 @@ h1, h2, h3, h4, h5, .logo {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  transition: all 500ms;
+  transition: all 400ms;
 }
 .div-heart:focus > .heart-empty {
   opacity: 0;
-  transition: all 500ms;
+  transition: all 400ms;
 }
 .div-heart:focus > .heart-solid {
   opacity: 1;
-  transition: all 500ms;
-  animation: heart 1.5s ease-in forwards;
+  transition: all 400ms;
+  animation: heart 500ms ease-in forwards;
+}
+@media (min-width: 992px) {
+  .div-heart:hover {
+    cursor: pointer;
+  }
+  .div-heart:hover > .heart-empty {
+    opacity: 0;
+    transition: all 400ms;
+  }
+  .div-heart:hover > .heart-solid {
+    opacity: 1;
+    transition: all 400ms;
+    animation: heart 500ms ease-in forwards;
+  }
 }
 
 @keyframes heart {
@@ -248,6 +285,7 @@ h1, h2, h3, h4, h5, .logo {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
+  transition: all 300ms;
   position: relative;
   margin-left: 16px;
 }
@@ -261,6 +299,7 @@ h1, h2, h3, h4, h5, .logo {
 }
 .fonc:hover {
   background-color: #f2eafb;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 .fonc:hover i {
   color: #9356DC;
@@ -276,6 +315,14 @@ h1, h2, h3, h4, h5, .logo {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.fonc > div {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .fonc > div {
+    font-size: 18px;
+  }
 }
 
 header {
@@ -325,6 +372,11 @@ header {
 .item-center {
   display: flex;
   align-items: center;
+}
+
+.self-center {
+  display: flex;
+  align-self: center;
 }
 
 .space-around {
@@ -757,18 +809,46 @@ header {
 .recherche {
   background-color: rgb(234, 234, 234);
 }
+.recherche > form {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+}
+.recherche > form > i {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  z-index: 10;
+  padding-left: 28%;
+}
+@media (min-width: 768px) {
+  .recherche > form > i {
+    padding-left: 35%;
+  }
+}
 
 .search {
+  height: 73px;
+}
+.search > input {
   outline: none;
   border: 0px;
   background-color: rgb(234, 234, 234);
-  padding: 1em;
+  height: 73px;
+  width: 100%;
+  font-size: 20px;
+  padding-left: 35%;
 }
-.search:focus {
+@media (min-width: 768px) {
+  .search > input {
+    padding-left: 40%;
+  }
+}
+.search > input:focus {
   outline: none;
 }
-
-.search::placeholder {
+.search > input ::placeholder {
   color: black;
   font-size: 20px;
 }
@@ -788,14 +868,13 @@ footer > i {
 .section-1 {
   background-color: #f6f6f6;
 }
-@media (min-width: 1313px) {
-  .section-1 {
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
-  }
-}
 
 .section-3 {
   background-color: rgb(246, 246, 246);
+}
+
+.fonctionnement > p {
+  font-size: 20px;
 }
 
 .card {
@@ -804,16 +883,20 @@ footer > i {
   border-radius: 20px;
   position: relative;
 }
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 .card > img {
   border-radius: 20px 20px 0 0;
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
 img {
   border-radius: 5px 5px 0 0;
+}
+
+.card-titre {
+  font-size: 18px;
+  font-weight: 900;
 }
 
 .new {
@@ -861,6 +944,16 @@ img {
   border-radius: 40px 40px 0 0;
   background-color: rgb(246, 246, 246);
   z-index: 10;
+}
+
+.titre-restau {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+}
+@media (min-width: 768px) {
+  .titre-restau {
+    font-size: 32px;
+  }
 }
 
 .upper {
@@ -921,93 +1014,93 @@ img {
   display: flex;
   width: 0;
   background-color: #99E2D0;
-  transition: all 1s;
+  transition: all 400ms;
 }
 .checkbox .check {
   margin: auto;
   color: #fff;
-  transition: transform 1s;
-  transform: rotate(-180deg);
+  transition: transform 400ms;
+  transform: rotate(-360deg);
 }
 
 .appear-1 {
-  animation: card 1500ms 500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 300ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-2 {
-  animation: card 1500ms 1000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 600ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-3 {
-  animation: card 1500ms 1500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 900ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-4 {
-  animation: card 1500ms 2000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 1200ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-5 {
-  animation: card 1500ms 2500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 1500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-6 {
-  animation: card 1500ms 3000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 1800ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-7 {
-  animation: card 1500ms 3500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 2100ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-8 {
-  animation: card 1500ms 4000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 2400ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-9 {
-  animation: card 1500ms 4500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 2700ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-10 {
-  animation: card 1500ms 5000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 3000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-11 {
-  animation: card 1500ms 5500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 3300ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-12 {
-  animation: card 1500ms 6000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 3600ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-13 {
-  animation: card 1500ms 6500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 3900ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-14 {
-  animation: card 1500ms 7000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 4200ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-15 {
-  animation: card 1500ms 7500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 4500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-16 {
-  animation: card 1500ms 8000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 4800ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-17 {
-  animation: card 1500ms 8500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 5100ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-18 {
-  animation: card 1500ms 9000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 5400ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-19 {
-  animation: card 1500ms 9500ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 5700ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 .appear-20 {
-  animation: card 1500ms 10000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
+  animation: card 300ms 6000ms cubic-bezier(0.27, 0.7, 0.14, 1.01) both;
 }
 
 @keyframes card {
